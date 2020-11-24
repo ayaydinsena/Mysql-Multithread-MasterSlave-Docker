@@ -1,0 +1,14 @@
+[mysqld]
+
+default-storage-engine         = InnoDB
+bind-address                   = 0.0.0.0
+server-id=1
+log-bin                        = /var/log/mysql/mysql-bin.log
+sync-binlog                    = 1
+gtid_mode = ON
+log-slave-updates = ON
+enforce-gtid-consistency = ON
+master_info_repository = table
+relay_log_info_repository = table
+slave_parallel_workers=3
+slave_parallel_type='DATABASE'
