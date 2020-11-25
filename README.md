@@ -45,7 +45,7 @@ rm -rf ./slave2/data/*
 #### Run command inside "mysql_master"
 
 ```
-docker exec mysql_master sh -c 'mysql -u root -p111 -e "SHOW MASTER STATUS \G"'
+docker exec mysql_master sh -c 'mysql -u root -p111 -e "SHOW SLAVE HOSTS"'
 ```
 
 #### Run command inside "mysql_slave"
